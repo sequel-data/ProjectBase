@@ -1,0 +1,1 @@
+﻿$cert = Get-ChildItem -Path "Cert:\CurrentUser\MY\2AA83F0754392D1CD14AFC9505C5DB21C7C6BC34"

@@ -1,0 +1,1 @@
+Get-Mailbox | Get-MailboxPermission | ? {$_.user.tostring() -ne "NT AUTHORITY\SELF" -and $_.IsInherited -eq $false} | Select Identity,User,@{Name='Access';Expression={[string]::join(', ', $_.AccessRights)}} | Export-Csv -NoTypeInformation c:\temp\mailboxpermissions0604.csv
